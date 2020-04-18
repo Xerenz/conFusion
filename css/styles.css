@@ -20,11 +20,11 @@
     padding: 70px 30px 70px 30px;
     margin: 0px auto;
     background: #9575cd;
-    color: floralwhite;
+    color: floralwhite; /* inner text color */ 
 }
 
 .address {
     font-size: 80%;
     margin: 0px;
-    color: #0f0f0f;
+    color: #0f0f0f; /* inner text color */
 }
