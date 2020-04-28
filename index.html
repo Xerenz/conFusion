@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
 
             <!-- toggler for es -->
@@ -39,8 +39,16 @@
                     <li class="nav-item"><a href="contactus.html" class="nav-link"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
 
+                <!--
                 <span class="navbar-text">
                     <button class="btn text-white" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"> Login</i>
+                    </button>
+                </span>
+                -->
+
+                <span class="navbar-text">
+                    <button class="btn text-white" id="loginButton">
                         <i class="fa fa-sign-in"> Login</i>
                     </button>
                 </span>
@@ -182,11 +190,20 @@
                 </div>
                 -->
 
+                <!--
                 <div class="col-12 col-sm align-self-center mt-5">
                     <a href="#reserveModal" role="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal">
                         <strong>Reserve Table</strong>
                     </a>
                 </div>
+                -->
+
+                <div class="col-12 col-sm align-self-center mt-5">
+                    <a href="#reserveModal" id="reserveButton" role="button" class="btn btn-warning btn-sm btn-block">
+                        <strong>Reserve Table</strong>
+                    </a>
+                </div>
+
             </div>
         </div>
     </header>
@@ -408,6 +425,8 @@
 
     <script>
         $(document).ready(function() {
+
+            // carousel
             $("#mycarousel").carousel({ interval : 2000 });
             $("#carouselButton").click(function() {
                 if ($("#carouselButton").children("i").hasClass("fa-pause")) {
@@ -420,6 +439,14 @@
                     $("carouselButton").children("i").removeClass("fa-play");
                     $("carouselButton").children("i").addClass("fa-pause");
                 }
+            });
+
+            // modal
+            $("#loginButton").click(function() {
+                $("#loginModal").modal("show");
+            });
+            $("#reserveButton").click(function() {
+                $("#reserveModal").modal("show");
             });
         });
     </script>
