@@ -9,10 +9,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+
 </head>
 
 <body>
@@ -411,6 +415,7 @@
         </div>
     </footer>
 
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -423,33 +428,8 @@
     </script>
     -->
 
-    <script>
-        $(document).ready(function() {
-
-            // carousel
-            $("#mycarousel").carousel({ interval : 2000 });
-            $("#carouselButton").click(function() {
-                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                    $("#mycarousel").carousel("pause");
-                    $("carouselButton").children("i").removeClass("fa-pause");
-                    $("carouselButton").children("i").addClass("fa-play");
-                }
-                else {
-                    $("#mycarousel").carousel("cycle");
-                    $("carouselButton").children("i").removeClass("fa-play");
-                    $("carouselButton").children("i").addClass("fa-pause");
-                }
-            });
-
-            // modal
-            $("#loginButton").click(function() {
-                $("#loginModal").modal("show");
-            });
-            $("#reserveButton").click(function() {
-                $("#reserveModal").modal("show");
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <!-- endbuild -->
 
 </body>
 
